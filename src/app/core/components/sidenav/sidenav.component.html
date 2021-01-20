@@ -1,1 +1,10 @@
-<p>sidenav works!</p>
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer mode="over" opened>Drawer content</mat-drawer>
+  <mat-drawer-content>
+    <button (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    Main content
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

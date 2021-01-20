@@ -1,7 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { PasswordResetComponent } from './components/password-reset/password-reset.component';
+
+const routes: Routes = [
+  {
+    path : "",
+    redirectTo : "login",
+    pathMatch : "full"
+  },
+  {
+    path: "login",
+    component: LoginComponent 
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'password-reset',
+    component: PasswordResetComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

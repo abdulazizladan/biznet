@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "biznet-540c7": {
+      "hosting": {
+        "BizNet": [
+          "biznet-540c7"
+        ]
+      }
+    }
+  }
+}
