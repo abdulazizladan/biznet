@@ -1,39 +1,43 @@
-<div fxLayout="column" fxLayoutAlign="center center auto" style="width: 100%; height: 100%;">
+<div fxLayout="row" fxLayoutAlign="center center auto" style="width: 100%; height: 100%;">
 
-    <mat-card class="mat-elevation-z4">
+    <mat-card fxFlex.xs="90%" fxFlex.gt-xs="400px" class="mat-elevation-z4">
         <form [formGroup]="loginForm" >
-        <mat-card-header>
-            <mat-icon matCardAvatar>
-                person
-            </mat-icon>
-            <mat-card-title>
-                Login
-            </mat-card-title>
+            <mat-card-header>
+                <mat-icon matCardAvatar>
+                    account_circle
+                </mat-icon>
+                <mat-card-title>
+                    Login
+                </mat-card-title>
 
-            <mat-card-subtitle>
-                Enter login details
-            </mat-card-subtitle>
-        </mat-card-header>
+                <mat-card-subtitle>
+                    Enter login details
+                </mat-card-subtitle>
+            </mat-card-header>
 
-        <mat-card-content fxLayout="column">
+            <mat-card-content fxLayout="column">
 
-            <mat-form-field appearance="outline">
-                <mat-label>email</mat-label>
-                <input formControlName="email" matInput type="email">
-                <mat-icon matSuffix>mail</mat-icon>
-            </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>email</mat-label>
+                    <input formControlName="email" matInput type="email" required>
+                    <mat-icon matSuffix color="primary">mail</mat-icon>
+                </mat-form-field>
 
-            <mat-form-field appearance="outline">
-                <mat-label>password</mat-label>
-                <input formControlName="password" matInput type="password">
-                <mat-icon matSuffix>lock</mat-icon>
-            </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>password</mat-label>
+                    <input formControlName="password" matInput type="password" required>
+                    <mat-icon matSuffix color="primary">lock</mat-icon>
+                </mat-form-field>
 
-        </mat-card-content>
+            </mat-card-content>
 
-        <mat-card-actions align="end"> 
-            <button mat-flat-button [disabled]="loginForm.invalid" color="primary" (click)="login()">Login</button>
-        </mat-card-actions>
+            <mat-card-actions align="end"> 
+                <button mat-flat-button [disabled]="loginForm.invalid" color="primary" (click)="login()">Login</button>
+            </mat-card-actions>
+
+            <mat-card-footer style="padding: 10px">
+                Not registered?<button mat-flat-button routerLink="/register">Register</button>
+            </mat-card-footer>
         </form>
     </mat-card>
 

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 //Core module
 import { CoreModule } from './core/core.module';
+import { AuthModule } from './auth/auth.module';
 
 //Material modules
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -20,6 +21,7 @@ import { NotFoundComponentComponent } from './not-found-component/not-found-comp
   ],
   imports: [
     CoreModule,
+    AuthModule,
     FlexLayoutModule,
     MatIconModule,
     BrowserModule,
